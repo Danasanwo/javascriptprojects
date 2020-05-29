@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #000000, #222222);
+}
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+
+    button {
+        cursor: pointer;
+        font-size: 2rem;
+        border: 1px solid white;
+        outline: none;
+        background-color: rgba($color: #ffffff, $alpha: 0.75);
+    }
+
+    button:hover {
+        background-color: rgba($color: #ffffff, $alpha: 0.9);
+    }
+
+    .double {
+        grid-column: span 2;
+    }
+
+    .screen {
+        grid-column: span 4;
+        border: 2px solid white;
+        background-color: #333333;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        flex-direction: column;
+
+        padding: 10px;
+        color: #eeeeee;
+        word-wrap: break-word;
+        word-break: break-all;
+
+        .calculus {
+            font-size: 1.5rem;
+            color: #dddddd;
+        }
+
+        .result {
+            font-size: 2.5rem;
+            color: #eeeeee;
+        }
+    }
+}
